@@ -1,5 +1,7 @@
 # Symfony4ApiRest
 
+[![Build Status](https://travis-ci.org/Tony133/Symfony4ApiRest.svg?branch=master)](https://travis-ci.org/Tony133/Symfony4ApiRest)
+
 Simple example of an API REST with Symfony 4
 
 ## Install with Composer
@@ -7,6 +9,12 @@ Simple example of an API REST with Symfony 4
 ```
     $ curl -s http://getcomposer.org/installer | php
     $ php composer.phar install or composer install
+```
+
+## Setting Environment
+
+```
+    $ cp .env.dist .env
 ```
 
 ## Getting with Curl 
