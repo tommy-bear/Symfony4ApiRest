@@ -1,4 +1,6 @@
 .DS_Store
+composer.phar
+composer.lock
 ###> symfony/framework-bundle ###
 .env
 /public/bundles/

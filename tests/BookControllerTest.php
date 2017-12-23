@@ -19,14 +19,24 @@ class BookControllerTest extends WebTestCase
 
     public function testGetBooks()
     {
-        $response = $this->client->get('/api/books');
+        $response = $this->client->get('/api/books', [
+            'auth' => [
+                'tony_admin',
+                'admin',
+            ]
+        ]);
 
         $this->assertEquals(200, $response->getStatusCode());
     }
 
     public function testGetBook()
     {
-        $response = $this->client->get('/api/books/1');
+        $response = $this->client->get('/api/books/1', [
+            'auth' => [
+                'tony_admin',
+                'admin',
+            ]
+        ]);
 
         $this->assertEquals(200, $response->getStatusCode());
     }
@@ -34,6 +44,10 @@ class BookControllerTest extends WebTestCase
     public function testPostBook()
     {
         $response = $this->client->post('/api/books', [
+            'auth' => [
+                'tony_admin',
+                'admin',
+            ],
             'json' => [
                 'title' => 'my Book',
                 'price' => '29.99'
@@ -47,6 +61,10 @@ class BookControllerTest extends WebTestCase
     public function testPutBook()
     {
         $response = $this->client->put('/api/books/6', [
+            'auth' => [
+                'tony_admin',
+                'admin',
+            ],
             'json' => [
                 'title' => 'my Book PHP',
                 'price' => '19.99'
@@ -58,7 +76,12 @@ class BookControllerTest extends WebTestCase
 
     public function testDeleteBook()
     {
-        $response = $this->client->delete('/api/books/8');
+        $response = $this->client->delete('/api/books/8', [
+            'auth' => [
+                'tony_admin',
+                'admin',
+            ]
+        ]);
 
         $this->assertEquals(200, $response->getStatusCode());
     }
