@@ -27,6 +27,12 @@ Simple example of an API REST with Symfony 4
     $ curl -H 'content-type: application/json' -v -X DELETE http://127.0.0.1:8000/api/books/remove/:id
 ```
 
+## User Authentication with Curl 
+
+```
+    $ curl -H 'content-type: application/json' -v -X GET http://127.0.0.1:8000/api/books  -H 'Authorization:Basic username:password or email:password' 
+```
+
 ## Getting with Phpunit
 
 ```
