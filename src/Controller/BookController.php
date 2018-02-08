@@ -20,16 +20,16 @@ class BookController extends FOSRestController
 	 * @Route("/books", name="get_books")
      */
     public function getBooksAction(): array
-	{
-		$em = $this->getDoctrine()->getManager();
-		$books = $em->getRepository(Book::class)->findAll();
+    {
+        $em = $this->getDoctrine()->getManager();
+        $books = $em->getRepository(Book::class)->findAll();
 
         if (!$books) {
-			throw new HttpException(400, "Invalid data");
-		}
+            throw new HttpException(400, "Invalid data");
+        }
 
-		return $books;
-	}
+        return $books;
+    }
 
 	/**
 	 * @Route("/books/{id}", name="get_book")
@@ -40,14 +40,14 @@ class BookController extends FOSRestController
             throw new HttpException(400, "Invalid id");
         }
 
-		$em = $this->getDoctrine()->getManager();
-		$book = $em->getRepository(Book::class)->find($id);
+        $em = $this->getDoctrine()->getManager();
+        $book = $em->getRepository(Book::class)->find($id);
 
         if (!$book) {
-			throw new HttpException(400, "Invalid data");
-		}
+            throw new HttpException(400, "Invalid data");
+        }
 
-		return $book;
+        return $book;
 	}
 
 	/**
