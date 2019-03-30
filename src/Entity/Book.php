@@ -25,7 +25,7 @@ class Book
     private $title;
 
     /**
-     * @ORM\Column(type="decimal", precision=10 scale=2)
+     * @ORM\Column(type="decimal", precision=10, scale=2)
      */
     private $price;
 
