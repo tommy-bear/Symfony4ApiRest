@@ -17,3 +17,9 @@ symfony.lock
 .phpunit
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
+
+###> PHPStorm ###
+/.idea/*
+###< PHPStorm ###
+
+/config/packages/cache.yaml
