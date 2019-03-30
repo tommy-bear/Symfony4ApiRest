@@ -25,7 +25,7 @@ class Book
     private $title;
 
     /**
-     * @ORM\Column(type="string", length=60)
+     * @ORM\Column(type="decimal", precision=10 scale=2)
      */
     private $price;
 
@@ -63,19 +63,20 @@ class Book
     /**
      * Set price
      *
-     * @param string $price
+     * @param float $price
      */
-    public function setPrice(string $price): void
+    public function setPrice(float $price): void
     {
+
         $this->price = $price;
     }
 
     /**
      * Get price
      *
-     * @return string
+     * @return float
      */
-    public function getPrice(): ?string
+    public function getPrice(): ?float
     {
         return $this->price;
     }
